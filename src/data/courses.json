@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "title": "Next JS",
+        "teacher": "میلاد عباسی",
+        "price": "2,850,000",
+        "image": "1_xmN4RFdB7g4XgKCJAfL6mA-300x300.png.webp",
+        "status": "pro"
+    },
+    {
+        "id": 2,
+        "title": "PHP & MySQL",
+        "teacher": "میلاد عباسی",
+        "price": "1,500,000",
+        "image": "a_clean_modern_youtube_style_course_thumbnail_b-300x300.webp",
+        "status": "pro"
+    },
+    {
+        "id": 3,
+        "title": "React JS",
+        "teacher": "میلاد عباسی",
+        "price": "2,850,000",
+        "image": "mytag-react-compressed-300x300.webp",
+        "status": "pro"
+    },
+    {
+        "id": 4,
+        "title": "TypeScript",
+        "teacher": "میلاد عباسی",
+        "price": "1,500,000",
+        "image": "typescript_thumbnail-300x300.webp",
+        "status": "pro"
+    },
+    {
+        "id": 5,
+        "title": "Sass",
+        "teacher": "میلاد عباسی",
+        "price": "0",
+        "image": "sass-300x300.jpeg.webp",
+        "status": "free"
+    },
+    {
+        "id": 6,
+        "title": "Angular",
+        "teacher": "میلاد عباسی",
+        "price": "5,000,000",
+        "image": "ang-2-300x300.webp",
+        "status": "pro"
+    },
+    {
+        "id": 7,
+        "title": "WooCommerce",
+        "teacher": "میلاد عباسی",
+        "price": "2,850,000",
+        "image": "WooCommerce_Tutorial_Banner_Compressed-300x300.jpg",
+        "status": "pro"
+    },
+    {
+        "id": 8,
+        "title": "JavaScript",
+        "teacher": "میلاد عباسی",
+        "price": "0",
+        "image": "javascript-300x300.jpeg.webp",
+        "status": "free"
+    },
+    {
+        "id": 9,
+        "title": "Bootstrap 5",
+        "teacher": "میلاد عباسی",
+        "price": "0",
+        "image": "FS5-LBBUYAAm87k-300x300.jpeg.webp",
+        "status": "free"
+    },
+    {
+        "id": 10,
+        "title": "Html 5 & CSS 3",
+        "teacher": "میلاد عباسی",
+        "price": "0",
+        "image": "html-css-course-cover-300x300.webp",
+        "status": "free"
+    },
+    {
+        "id": 11,
+        "title": "Postman",
+        "teacher": "میلاد عباسی",
+        "price": "0",
+        "image": "postman-300x300.png.webp",
+        "status": "free"
+    },
+    {
+        "id": 12,
+        "title": "WordPress",
+        "teacher": "میلاد عباسی",
+        "price": "1,850,000",
+        "image": "WordPress-Benefits-1-300x300.png",
+        "status": "pro"
+    }
+]
