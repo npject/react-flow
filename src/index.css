@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans: "Inter", "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+    --color-primary-50: #f1f3f8;
+    --color-primary-100: #e2e6f0;
+    --color-primary-200: #c7cde2;
+    --color-primary-300: #a0aacc;
+    --color-primary-400: #7681b3;
+    --color-primary-500: #555f96; /* رنگ اصلی متعادل */
+    --color-primary-600: #424a7a;
+    --color-primary-700: #353b61;
+    --color-primary-800: #2c3150;
+    --color-primary-900: #23273d;
+    /* متغیرهای اصلی */
+    --color-primary: #555f96; 
+    /* رنگ اکسنت خاص (کهربایی دودی - Amber/Bronze) */
+    --color-secondary: #d4a373; 
+    /* رنگ زمینه (یک کرمِ خیلی روشن و باکلاس) */
+    --color-base: #fefcf7; 
+    /* رنگ خطر (قرمزِ آتشیِ تیره که با سرمه‌ای همخوانی دارد) */
+    --color-danger: #8b1e1e;
+    --color-danger-500: #a92a2a;
+    --color-danger-600: #8b1e1e;
+    --color-danger-700: #6b1717;
+    --color-border-card: rgba(35, 39, 61, 0.06);
+    --color-border-card-hover: rgba(35, 39, 61, 0.08);
+    --shadow-card-base: 0 1px 3px rgba(35, 39, 61, 0.04); 
+    --shadow-card-hover: 0 4px 12px -2px rgba(35, 39, 61, 0.08);
+    --shadow-liked: 0 0 12px rgba(212, 163, 115, 0.25);    
+} 
+
+@layer base {
+    body {
+        direction: rtl;
+    }
+}
+
+@layer components {
+    .my-container {
+        @apply mx-auto w-full sm:w-11/12 lg:w-10/12 xl:w-9/12 max-w-7xl px-4 sm:px-0;
+    }
+}
