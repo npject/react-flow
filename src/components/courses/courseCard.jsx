@@ -1,6 +1,15 @@
 import { Heart } from "lucide-react"
 
-function CourseCard ({ data }) {
+function CourseCard ({ data, setFavCourses, isFavorite }) {
+    const toggleFavorite = (item) => {
+        isFavorite.has(item.id) ? deleteFromFavorite(item.id) : addToFavorite(item)
+    }
+    const addToFavorite = (item) => {
+        setFavCourses(items => [...items, item])
+    }
+    const deleteFromFavorite = (id) => {
+        setFavCourses(items => items.filter(item => item.id !== id))
+    }
     
     return (
         <>
@@ -34,11 +43,15 @@ function CourseCard ({ data }) {
                 <div className="relative inline-flex items-center gap-4 -ms-4">
                     <div className="relative w-14.5 h-14.5 pt-2 pe-2 bg-base border border-border-card rounded-tl-[32px] 
                     shadow-card-base-inner group-hover:shadow-card-hover-inner transition-all duration-200">
-                        <div className="relative z-3 border-2 border-danger w-12 h-12 rounded-full flex justify-center items-center ">
-                            <Heart fill="transparent" className="text-danger" />
+                        <div onClick={() => toggleFavorite(data)} 
+                        className="relative z-3 border-2 border-danger w-12 h-12 rounded-full flex justify-center items-center cursor-pointer">
+                            <Heart 
+                            className={`text-danger ${isFavorite.has(data.id) ? 'fill-danger' : 'fill-transparent'}`} />
                         </div>
                     </div>
-                    <p className="w-max text-xs font-medium text-danger">افزودن به علاقه مندی ها</p>
+                    <p className="w-max text-xs font-medium text-danger">
+                        {isFavorite.has(data.id) ? 'افزوده شده به علاقه مندی ها' : 'افزودن به علاقه مندی ها'}
+                    </p>
 
                     {/* Decorative Elements */}
                     {/* --- shadow یکم ایراد داره --- */}

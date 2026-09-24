@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/layout/Layout.jsx'
 import Home from './pages/Home.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
+import FavoriteCourses from './pages/FavoriteCourses.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home
+      },
+      {
+        path: "favoriteCourses",
+        Component: FavoriteCourses
       }
     ]
   }
