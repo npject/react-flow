@@ -1,11 +1,11 @@
-import CourseCard from "../components/courses/CourseCard"
 import coursesData from "../data/courses.json"
 import { HeartPlus } from "lucide-react"
 import { Link } from "react-router-dom"
 import { useFavoriteCourses } from "../hooks/useFavoriteCourses"
+import CourseList from "../components/courses/CourseList"
 
 function Home () {
-    const { setFavCourses, favCourseIds, isFavorite } = useFavoriteCourses()
+    const { favCourseCount, isFavorite, toggleFavorite } = useFavoriteCourses()
 
     return (
         <>
@@ -18,24 +18,16 @@ function Home () {
                         <HeartPlus className="text-secondary" />
                         <span>مشاهده علاقه مندی ها</span>
                         <span className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded-full 
-                        font-bold bg-primary-800 text-secondary">{favCourseIds ? favCourseIds.length : 0}</span>
+                        font-bold bg-primary-800 text-secondary">{favCourseCount}</span>
                     </Link>
                 </div>
             </div>
         </section>
-        <section>
-            <div className="my-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 mt-8 mb-12">
-                {coursesData.map(item => (
-                    <CourseCard 
-                    data={item} 
-                    key={item.id}
-                    setFavCourses={setFavCourses}
-                    //setFavCourseIds={setFavCourseIds}
-                    isFavorite={isFavorite}
-                    />
-                ))}
-            </div>
-        </section>
+        <CourseList 
+            coursesData={coursesData}
+            isFavorite={isFavorite}
+            toggleFavorite={toggleFavorite}
+        />
         </>
     )
 }

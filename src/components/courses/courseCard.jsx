@@ -1,15 +1,6 @@
 import { Heart } from "lucide-react"
 
-function CourseCard ({ data, setFavCourses, isFavorite }) {
-    const toggleFavorite = (item) => {
-        isFavorite.has(item.id) ? deleteFromFavorite(item.id) : addToFavorite(item)
-    }
-    const addToFavorite = (item) => {
-        setFavCourses(items => [...items, item])
-    }
-    const deleteFromFavorite = (id) => {
-        setFavCourses(items => items.filter(item => item.id !== id))
-    }
+function CourseCard ({ data, isFavorite, toggleFavorite }) {
     
     return (
         <>
@@ -46,11 +37,11 @@ function CourseCard ({ data, setFavCourses, isFavorite }) {
                         <div onClick={() => toggleFavorite(data)} 
                         className="relative z-3 border-2 border-danger w-12 h-12 rounded-full flex justify-center items-center cursor-pointer">
                             <Heart 
-                            className={`text-danger ${isFavorite.has(data.id) ? 'fill-danger' : 'fill-transparent'}`} />
+                            className={`text-danger ${isFavorite ? 'fill-danger' : 'fill-transparent'}`} />
                         </div>
                     </div>
                     <p className="w-max text-xs font-medium text-danger">
-                        {isFavorite.has(data.id) ? 'افزوده شده به علاقه مندی ها' : 'افزودن به علاقه مندی ها'}
+                        {isFavorite ? 'افزوده شده به علاقه مندی ها' : 'افزودن به علاقه مندی ها'}
                     </p>
 
                     {/* Decorative Elements */}

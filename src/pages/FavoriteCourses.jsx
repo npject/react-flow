@@ -1,27 +1,21 @@
 import { Ghost, HeartX } from "lucide-react"
-import CourseCard from "../components/courses/CourseCard"
 import { useFavoriteCourses } from "../hooks/useFavoriteCourses"
 import { Link } from "react-router-dom"
+import CourseList from "../components/courses/CourseList"
 
 function FavoriteCourses () {
-    const { favCourses, setFavCourses, isFavorite } = useFavoriteCourses()
+    const { favCourses, isFavorite, toggleFavorite } = useFavoriteCourses()
 
     return (
         <>
+        {favCourses.length !== 0 && (
+            <CourseList 
+                coursesData={favCourses}
+                isFavorite={isFavorite}
+                toggleFavorite={toggleFavorite}
+            />
+        )}
         <section>
-            {favCourses.length !== 0 && (
-                <div className="my-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 my-12">
-                    {favCourses.map((item, index) => (
-                        <CourseCard 
-                        data={item} 
-                        key={index}
-                        setFavCourses={setFavCourses}
-                        //setFavCourseIds={setFavCourseIds}
-                        isFavorite={isFavorite}
-                        />
-                    ))}
-                </div>
-            )}
             {favCourses.length === 0 && (
                 <div className="my-container h-screen flex flex-col justify-center items-center">
                     <div className="relative mb-8">
