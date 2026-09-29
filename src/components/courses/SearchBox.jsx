@@ -1,6 +1,6 @@
-import { Search } from "lucide-react"
+import { Search, X } from "lucide-react"
 
-function SearchBox () {
+function SearchBox ({ searchQuery, onChangeInput }) {
 
     return (
         <>
@@ -15,9 +15,12 @@ function SearchBox () {
                 focus-visible:outline-primary-500/25 rounded-tr-3xl rounded-br-sm rounded-bl-3xl">
                     <Search />
                 </button>
-                <input type="text" 
-                className="w-full ps-4 pe-20 py-2  bg-transparent text-primary-900 placeholder-primary-400 
+                <input type="text" value={searchQuery} onChange={onChangeInput}
+                className="w-full ps-4 pe-22 py-2  bg-transparent text-primary-900 placeholder-primary-400 
                 outline-0 " style={{"direction": "ltr"}} placeholder="search course title..." />
+                {/* <X onClick={clearSearchQuery}
+                size={16} className={`absolute right-17 text-danger/60 hover:text-danger-500 transition-all duration-200 
+                ${searchQuery !== '' ? 'visible opacity-100' : 'invisible opacity-0'}`} /> */}
             </div>
         </div>
         </>

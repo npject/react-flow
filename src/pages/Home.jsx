@@ -5,9 +5,12 @@ import { useFavoriteCourses } from "../hooks/useFavoriteCourses"
 import CourseList from "../components/courses/CourseList"
 import CourseFilter from "../components/courses/CourseFilter"
 import SearchBox from "../components/courses/SearchBox"
+import { useFilterCourses } from "../hooks/useFilterCourses"
 
 function Home () {
     const { favCourseCount, isFavorite, toggleFavorite } = useFavoriteCourses()
+    const { filteredCourses, searchQuery, onChangeInput, filters, priceFilter, setPriceFilter } = 
+        useFilterCourses({ allCourses: coursesData })
 
     return (
         <>
@@ -27,12 +30,20 @@ function Home () {
                         </span>
                     </Link>
                 </div>
-                <CourseFilter />
-                <SearchBox />
+                <CourseFilter 
+                    filters={filters}
+                    priceFilter={priceFilter}
+                    setPriceFilter={setPriceFilter}
+                    />
+                <SearchBox 
+                    search={searchQuery}
+                    // clearSearchQuery={clearSearchQuery}
+                    onChangeInput={onChangeInput}
+                />
             </div>
         </section>
         <CourseList 
-            coursesData={coursesData}
+            coursesData={filteredCourses}
             isFavorite={isFavorite}
             toggleFavorite={toggleFavorite}
         />
