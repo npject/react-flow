@@ -32,7 +32,7 @@ function CourseCard ({ data, isFavorite, toggleFavorite }) {
                     </button>
                 </div>
                 <div className="relative inline-flex items-center gap-4 -ms-4">
-                    <div className="relative w-14.5 h-14.5 pt-2 pe-2 bg-base border border-border-card rounded-tl-[32px] 
+                    <div className="relative w-14.5 h-14.5 pt-2 pe-2 bg-base border border-border-card rounded-tl-4xl 
                     shadow-card-base-inner group-hover:shadow-card-hover-inner transition-all duration-200">
                         <div onClick={() => toggleFavorite(data)} 
                         className="relative z-3 border-2 border-danger w-12 h-12 rounded-full flex justify-center items-center cursor-pointer">
