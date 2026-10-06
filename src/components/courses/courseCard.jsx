@@ -1,7 +1,9 @@
 import { Heart } from "lucide-react"
+import { memo } from "react"
 
 function CourseCard ({ data, isFavorite, toggleFavorite }) {
-    
+    console.log("CourseCard rendered::::", `id: ${data.id}`)
+
     return (
         <>
         <div className="group course-card w-full hover:scale-[1.005] transition-all duration-200 
@@ -68,4 +70,4 @@ function CourseCard ({ data, isFavorite, toggleFavorite }) {
         </>
     )
 }
-export default CourseCard
+export default memo(CourseCard) 

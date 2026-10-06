@@ -2,6 +2,7 @@ import { SearchX } from "lucide-react"
 import CourseCard from "./CourseCard"
 
 function CourseList ({ coursesData, isFavorite, toggleFavorite }) {
+    console.log("CourseList rendered::::")
 
     return (
         <>
