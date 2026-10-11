@@ -1,5 +1,6 @@
 import { Heart } from "lucide-react"
 import { memo } from "react"
+import { CardDecoration } from "../ui/CardDecoration"
 
 function CourseCard ({ data, isFavorite, toggleFavorite }) {
     console.log("CourseCard rendered::::", `id: ${data.id}`)
@@ -41,29 +42,11 @@ function CourseCard ({ data, isFavorite, toggleFavorite }) {
                             <Heart 
                             className={`text-danger ${isFavorite ? 'fill-danger' : 'fill-transparent'}`} />
                         </div>
+                        <CardDecoration />
                     </div>
                     <p className="w-max text-xs font-medium text-danger">
                         {isFavorite ? 'افزوده شده به علاقه مندی ها' : 'افزودن به علاقه مندی ها'}
                     </p>
-
-                    {/* Decorative Elements */}
-                    {/* --- shadow یکم ایراد داره --- */}
-                    <div className="before:z-1 before:content-[''] before:absolute before:-bottom-4 before:-right-4 before:w-0 before:h-0 
-                    before:border-44 before:border-r-base before:border-b-base before:border-t-transparent before:border-l-transparent
-                    "></div>
-                    {/* before:w-[73px] before:h-[73px] before:rounded-tl-[35px] before:bg-base */}
-                    <div className="before:z-2 before:content-[''] before:absolute before:top-[-15px] before:right-[-1px] 
-                    before:w-4 before:h-4 before:transparent before:rounded-br-lg before:border-r before:border-b 
-                    before:border-border-card before:shadow-[8px_8px_0px_8px_var(--color-base)]
-                    after:z-3 after:content-[''] after:absolute after:top-[-15px] after:right-[-1px] 
-                    after:w-4 after:h-4 after:transparent after:rounded-br-lg 
-                    after:shadow-card-base group-hover:after:shadow-card-hover"></div>
-                    <div className="before:z-2 before:content-[''] before:absolute before:bottom-[-1px] before:right-14.5 
-                    before:w-4 before:h-4 before:transparent before:rounded-br-lg before:border-r before:border-b 
-                    before:border-border-card before:shadow-[8px_8px_0px_8px_var(--color-base)]
-                    after:z-3 after:content-[''] after:absolute after:bottom-[-1px] after:right-14.5 
-                    after:w-4 after:h-4 after:transparent after:rounded-br-lg 
-                    after:shadow-card-base group-hover:after:shadow-card-hover"></div>
                 </div>
             </div>
         </div>
