@@ -1,10 +1,10 @@
 import { Search, X } from "lucide-react"
 
-function SearchBox ({ searchQuery, onChangeInput }) {
+function SearchBox ({ searchQuery, onChangeInput, className }) {
 
     return (
         <>
-        <div className="relative w-full max-w-xs group">
+        <div className={`relative max-w-xs group ${className || ''} ${className.includes('w-') ? '' : 'w-auto'}`}>
             <div className="flex items-center border border-primary-200 overflow-hidden rounded-tl-sm rounded-bl-3xl 
             rounded-tr-3xl rounded-br-sm shadow-card-base hover:shadow-card-hover bg-primary-50 
             group-focus-within:border-primary-500 group-focus-within:outline-3 group-focus-within:outline-primary-500/20 

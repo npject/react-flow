@@ -1,14 +1,14 @@
-function CourseFilter ({ filters, priceFilter, setPriceFilter }) {
+function CourseFilter ({ filters, priceFilter, setPriceFilter, className }) {
 
     return (
         <>
-        <div className="w-auto">
+        <div className={`w-auto ${className || ''}`}>
             <div className="inline-flex py-1 px-1.5 bg-primary-100 border border-primary-200 text-sm font-medium rounded-b-3xl 
             rounded-t-sm shadow-card-base hover:shadow-card-hover">
 
                 {filters.map((item, index) => (
                     <button key={index} type="button" onClick={() => setPriceFilter(item.value)}
-                    className={`px-4 py-1.5 rounded-4xl cursor-pointer 
+                    className={`px-4 py-1.5 rounded-4xl cursor-pointer whitespace-nowrap 
                     ${item.value === priceFilter ? 'bg-primary-700 text-primary-50 active:bg-primary-800'
                      : 'bg-transparent text-primary-600 hover:bg-primary-50 hover:text-primary-800'}`}>
                         {item.label}
