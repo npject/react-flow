@@ -11,11 +11,11 @@ export function useFilterCourses ({ allCourses }) {
     ]
 
     const filteredCourses = allCourses
-        .filter(course => course.title.toLowerCase().includes(searchQuery))
+        .filter(course => course.title.toLowerCase().includes(searchQuery.trim().toLowerCase()))
         .filter(course => priceFilter === "all" ? course : course.status === priceFilter)
 
-    const onChangeInput = (ev) => setSearchQuery(ev.target.value.trim().toLowerCase())  
-    // const clearSearchQuery = () => setSearchQuery("")
+    const onChangeInput = (ev) => setSearchQuery(ev.target.value)  
+    const clearSearchQuery = () => setSearchQuery("")
 
-    return { searchQuery, onChangeInput, filters, priceFilter, setPriceFilter, filteredCourses }
+    return { searchQuery, onChangeInput, filters, priceFilter, setPriceFilter, filteredCourses, clearSearchQuery }
 }

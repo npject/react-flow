@@ -9,7 +9,7 @@ import { useFilterCourses } from "../hooks/useFilterCourses"
 
 function Home () {
     const { favCourseCount, isFavorite, toggleFavorite } = useFavoriteCourses()
-    const { filteredCourses, searchQuery, onChangeInput, filters, priceFilter, setPriceFilter } = 
+    const { filteredCourses, searchQuery, onChangeInput, filters, priceFilter, setPriceFilter, clearSearchQuery } = 
         useFilterCourses({ allCourses: coursesData })
 
     return (
@@ -37,8 +37,8 @@ function Home () {
                     className="flex-initial order-3 md:order-2"
                 />
                 <SearchBox 
-                    search={searchQuery}
-                    // clearSearchQuery={clearSearchQuery}
+                    searchQuery={searchQuery}
+                    clearSearchQuery={clearSearchQuery}
                     onChangeInput={onChangeInput}
                     className="sm:grow w-9/12 sm:w-auto order-2 md:order-3"
                 />
