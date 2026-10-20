@@ -4,9 +4,9 @@ function SearchBox ({ searchQuery, onChangeInput, clearSearchQuery, className })
 
     return (
         <>
-        <div className={`relative max-w-xs group ${className || ''} ${className.includes('w-') ? '' : 'w-auto'}`}>
+        <div className={`relative max-w-xs group ${className || ''} ${className?.includes('w-') ? '' : 'w-auto'}`}>
             <div className="flex items-center border border-primary-200 overflow-hidden rounded-tl-sm rounded-bl-3xl 
-            rounded-tr-3xl rounded-br-sm shadow-card-base hover:shadow-card-hover bg-primary-50 
+            rounded-tr-3xl rounded-br-sm bg-primary-50 
             group-focus-within:border-primary-500 group-focus-within:outline-3 group-focus-within:outline-primary-500/20 
             group-focus-within:focus-visible:outline-offset-1">
                 <button type="button" 
