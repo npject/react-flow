@@ -9,14 +9,14 @@ import { useFilterCourses } from "../hooks/useFilterCourses"
 
 function Home () {
     const { favCourseCount, isFavorite, toggleFavorite } = useFavoriteCourses()
-    const { filteredCourses, searchQuery, onChangeInput, filters, priceFilter, setPriceFilter } = 
+    const { filteredCourses, searchQuery, onChangeInput, filters, priceFilter, setPriceFilter, clearSearchQuery } = 
         useFilterCourses({ allCourses: coursesData })
 
     return (
         <>
         <section>
-            <div className="my-container mt-12 flex justify-center items-center gap-x-2">
-                <div className="w-auto">
+            <div className="my-container mt-12 flex justify-center items-center flex-wrap md:flex-nowrap gap-x-2 gap-y-2">
+                <div className="w-auto flex-none order-1 md:order-1">
                     <Link to={"/favoriteCourses"} className="relative inline-flex px-4 py-2 bg-primary-50 text-primary-600 
                     shadow-card-base hover:bg-primary-100 hover:text-primary-800 hover:shadow-card-hover 
                     transition-colors duration-200 cursor-pointer border border-primary-200 rounded-tr-sm rounded-bl-sm
@@ -34,11 +34,13 @@ function Home () {
                     filters={filters}
                     priceFilter={priceFilter}
                     setPriceFilter={setPriceFilter}
-                    />
+                    className="flex-initial order-3 md:order-2"
+                />
                 <SearchBox 
-                    search={searchQuery}
-                    // clearSearchQuery={clearSearchQuery}
+                    searchQuery={searchQuery}
+                    clearSearchQuery={clearSearchQuery}
                     onChangeInput={onChangeInput}
+                    className="sm:grow w-9/12 sm:w-auto order-2 md:order-3"
                 />
             </div>
         </section>
