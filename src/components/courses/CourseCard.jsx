@@ -16,7 +16,7 @@ function CourseCard ({ data, isFavorite, toggleFavorite }) {
                     rounded-lg text-sm shadow-2xs shadow-base">
                         مدرس: {data.teacher}
                     </span>
-                    <img src={`/src/assets/img/${data.image}`} className="w-full shadow-card-base rounded-t-lg rounded-b-xs 
+                    <img src={`/images/courses/${data.image}`} className="w-full shadow-card-base rounded-t-lg rounded-b-xs 
                     aspect-square" alt={data.title} />
                 </div>
                 <div className="w-full flex flex-col py-4 gap-2">
