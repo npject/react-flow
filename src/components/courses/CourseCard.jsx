@@ -23,9 +23,9 @@ function CourseCard ({ data, isFavorite, toggleFavorite }) {
                     <h5 className="font-bold text-primary-900">{data.title}</h5>
                     <p>
                         <span className="text-secondary font-bold">
-                            {data.price !== "0" ? data.price : "رایگان"}
+                            {data.price > 0 ? data.price.toLocaleString("fa-IR") : "رایگان"}
                         </span>
-                        {data.price !== "0" && (
+                        {data.price > 0 && (
                             <span className="text-primary-900 font-medium ms-1">تومان</span>
                         )}
                     </p>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 
 export function useFilterCourses ({ allCourses }) {
     const [searchQuery, setSearchQuery] = useState("")
@@ -10,9 +10,14 @@ export function useFilterCourses ({ allCourses }) {
         { value: "pro", label: "دوره های پولی"}
     ]
 
+    const normalizedQuery = searchQuery.trim().toLowerCase()
     const filteredCourses = allCourses
-        .filter(course => course.title.toLowerCase().includes(searchQuery.trim().toLowerCase()))
-        .filter(course => priceFilter === "all" ? course : course.status === priceFilter)
+        .filter(course => course.title.toLowerCase().includes(normalizedQuery))
+        .filter(course => 
+            priceFilter === "free" ? course.price === 0 : 
+            priceFilter === "pro" ? course.price > 0 : 
+            true
+        )
 
     const onChangeInput = (ev) => setSearchQuery(ev.target.value)  
     const clearSearchQuery = () => setSearchQuery("")
