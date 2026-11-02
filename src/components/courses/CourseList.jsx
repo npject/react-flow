@@ -1,5 +1,5 @@
 import { SearchX } from "lucide-react"
-import CourseCard from "./CourseCard"
+import CourseCard from "./Card.jsx"
 
 function CourseList ({ coursesData, isFavorite, toggleFavorite }) {
     console.log("CourseList rendered::::")
