@@ -3,7 +3,6 @@ import { memo } from "react"
 import { CardDecoration } from "../ui/CardDecoration"
 
 function CourseCard ({ data, isFavorite, toggleFavorite }) {
-    console.log("CourseCard rendered::::", `id: ${data.id}`)
 
     return (
         <>
