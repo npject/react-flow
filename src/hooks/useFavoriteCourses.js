@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useContext } from "react"
+import { FavoriteContext } from "../context/FavoriteContext"
 
 export function useFavoriteCourses () {
-    const [favCourses, setFavCourses] = useState(() => JSON.parse(localStorage.getItem("favCourses")) || [])
+    const { favCourses, setFavCourses } = useContext(FavoriteContext)
     const favCourseIds = favCourses.map(item => item.id)
     const favCourseCount = favCourses.length
     
@@ -17,11 +18,7 @@ export function useFavoriteCourses () {
                 return [...prevItems, item]
             }
         })
-    },[]) 
+    },[setFavCourses]) 
         
-    useEffect(() => {
-        localStorage.setItem("favCourses", JSON.stringify(favCourses))
-    }, [favCourses])
-
     return { favCourses, favCourseCount, isFavorite, toggleFavorite }
 }

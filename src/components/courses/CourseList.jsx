@@ -2,7 +2,6 @@ import { SearchX } from "lucide-react"
 import CourseCard from "./CourseCard"
 
 function CourseList ({ coursesData, isFavorite, toggleFavorite }) {
-    console.log("CourseList rendered::::")
 
     return (
         <>
@@ -19,7 +18,7 @@ function CourseList ({ coursesData, isFavorite, toggleFavorite }) {
             )}
         </section>
         <section>
-            <div className="my-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 mt-8 mb-12">
+            <div className="my-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 mt-8 mb-12">
                 {coursesData.map(item => (
                     <CourseCard 
                         data={item} 
