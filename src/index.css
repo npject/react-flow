@@ -20,10 +20,18 @@
     /* --color-base: #fefcf7;  */
     --color-base: #e8e1d5;
     /* رنگ خطر (قرمزِ آتشیِ تیره که با سرمه‌ای همخوانی دارد) */
-    --color-danger: #8b1e1e;
+    --color-danger-50: #fbf5f5;
+    --color-danger-100: #f3dfdf;
+    --color-danger-200: #e8bfbf;
+    --color-danger-300: #d69494;
+    --color-danger-400: #be5b5b;
     --color-danger-500: #a92a2a;
     --color-danger-600: #8b1e1e;
     --color-danger-700: #6b1717;
+    --color-danger-800: #5c1414;
+    --color-danger-900: #420f0f;
+    --color-danger-950: #240707;
+    --color-danger: #8b1e1e;
     --color-border-card: rgba(35, 39, 61, 0.06);
     --color-border-card-hover: rgba(35, 39, 61, 0.08);
     --shadow-card-base: 0 1px 3px rgba(35, 39, 61, 0.04); 
