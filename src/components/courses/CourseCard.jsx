@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react"
 import { memo, useState } from "react"
-import { CardDecoration } from "../ui/CardDecoration"
+import { CardDecoration } from "@/components/ui"
 
 function CourseCard ({ data, isFavorite, toggleFavorite }) {
     const [imageLoading, setImageLoading] = useState(true)

@@ -1,7 +1,7 @@
-import { Ghost, HeartX } from "lucide-react"
-import { useFavoriteCourses } from "../hooks/useFavoriteCourses"
 import { Link } from "react-router-dom"
-import CourseList from "../components/courses/CourseList"
+import { Ghost, HeartX } from "lucide-react"
+import { useFavoriteCourses } from "@/hooks"
+import { CourseList } from "@/components/courses"
 
 function FavoriteCourses () {
     const { favCourses, isFavorite, toggleFavorite } = useFavoriteCourses()

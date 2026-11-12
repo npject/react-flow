@@ -1,16 +1,11 @@
-import { HeartPlus } from "lucide-react"
-import { Link } from "react-router-dom"
-import { useFavoriteCourses } from "../hooks/useFavoriteCourses"
-import CourseList from "../components/courses/CourseList"
-import CourseFilter from "../components/courses/CourseFilter"
-import SearchBox from "../components/courses/SearchBox"
-import { useFilterCourses } from "../hooks/useFilterCourses"
 import { useEffect, useState } from "react"
-import { fetchProducts } from "../services/productsService"
-import Loading from "../components/ui/Loading"
-import CardSkeleton from "../components/ui/CardSkeleton"
-import ErrorBox from "../components/ui/ErrorBox"
-import { getFriendlyErrorMessage } from "../utils/error-utils"
+import { Link } from "react-router-dom"
+import { HeartPlus } from "lucide-react"
+import { CourseList, CourseFilter, SearchBox } from "@/components/courses"
+import { useFavoriteCourses, useFilterCourses } from "@/hooks"
+import { fetchProducts } from "@/services/productsService"
+import { Loading, CardSkeleton, ErrorBox } from "@/components/ui"
+import { getFriendlyErrorMessage } from "@/utils/error-utils"
 
 
 function Home () {

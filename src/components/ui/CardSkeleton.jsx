@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-import { CardDecoration } from "./CardDecoration";
+import { CardDecoration } from "@/components/ui";
 
 export default function CardSkeleton () {
     return (
