@@ -1,4 +1,4 @@
-export const CardDecoration = () => {
+export default function CardDecoration () {
     return (
         <>
         <div className="w-full h-0 pointer-events-none">
